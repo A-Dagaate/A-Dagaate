@@ -6,13 +6,15 @@ I test systems at the seams — auth flows, async pipelines, PDF classifiers, RA
 
 Currently studying for **ISTQB Security Test Engineer** (STE v1.0.1) and building a RAG-powered tutor to do it.
 
+📝 **[Engineering notes →](https://a-dagaate.github.io/)** — what I find while building and operating the projects below. Every post is grounded in real code, real logs and measured numbers.
+
 ---
 
 ## What I'm working on
 
 | Project | Stack | What it does |
 |---|---|---|
-| [pdf-classifier-app](https://github.com/A-Dagaate/pdf-classifier-app) | Spring Boot · Python FastAPI · Docker | Secure PDF upload + ML classification + RAG study sidecar (ChromaDB · Claude AI) |
+| [pdf-classifier-app](https://github.com/A-Dagaate/pdf-classifier-app) — **[live ↗](https://ashtvkr.up.railway.app)** | Spring Boot · Python FastAPI · Docker · Postgres | Secure PDF upload + ML classification + RAG study sidecar (ChromaDB · Claude AI). 128 tests, CI on every push, deployed on Railway |
 | OpenClaw | Python · Claude API | Automated chess game analyser with LLM commentary |
 | RideGhana | React · Node | Ride-hailing UI prototype |
 
@@ -52,6 +54,6 @@ I write tests that catch real failures, not tests that pass by definition. That 
 
 ## Let's talk
 
-`ze2@hotmail.com` · [GitHub](https://github.com/A-Dagaate)
+`ze2@hotmail.com` · [GitHub](https://github.com/A-Dagaate) · [Engineering notes](https://a-dagaate.github.io/)
 
 Open to SDET, QE lead, and backend engineering roles.
