@@ -1,8 +1,8 @@
 # Charles Agyeman — A-Dagaate
 
-**Lead SDET · Security-minded · Building things that work under pressure**
+**Full-stack Java developer · Spring Boot · Security-minded**
 
-I test systems at the seams — auth flows, async pipelines, PDF classifiers, RAG endpoints. When I find a gap I patch it, document it, and automate the regression.
+I build and operate backend systems — auth flows, async pipelines, batch jobs, REST integrations — and I run them in production rather than only building them. A test-engineering background means the systems I ship come with the evidence that they work.
 
 Currently studying for **ISTQB Security Test Engineer** (STE v1.0.1) and building a RAG-powered tutor to do it.
 
@@ -23,24 +23,27 @@ Currently studying for **ISTQB Security Test Engineer** (STE v1.0.1) and buildin
 ## Tech I reach for first
 
 ```
-Languages:   Java · Python · C# · JavaScript
-Frameworks:  Spring Boot · FastAPI · Playwright · JUnit 5
-AI / ML:     Anthropic Claude API · ChromaDB · sentence-transformers · RAGAs
-Security:    Spring Security · TOTP · JWT · Snyk
-Infra:       Docker · Docker Compose · Maven · Git
-Testing:     Contract testing (PACT) · MockMvc · Mockito · WireMock
+Backend:     Java 17 · Spring Boot 3 · Spring Data JPA · Spring Batch 5 · Spring Security
+Data:        PostgreSQL · H2 · Hibernate · ChromaDB
+Services:    REST · multipart uploads · FastAPI sidecar · RestTemplate clients
+Frontend:    Thymeleaf server-side rendering · JavaScript · React (learning)
+Security:    Spring Security filter chain · TOTP 2FA · CSRF · BCrypt · Snyk
+Infra:       Docker multi-stage · Docker Compose · Railway · Maven · GitHub Actions
+Testing:     JUnit 5 · Mockito · MockMvc · WireMock · Spring test slices
+AI / ML:     Anthropic Claude API · sentence-transformers · RAG pipelines
 ```
 
 ---
 
-## How I test
+## How I build
 
-I write tests that catch real failures, not tests that pass by definition. That means:
+I ship features with the evidence that they work, and I go looking for the ways they do not.
 
-- **Contract tests** before integration — PACT consumer/provider pacts on REST APIs
-- **RAG evaluation** with RAGAs — faithfulness, answer relevance, context precision scored against ground truth
-- **Async-safe assertions** — `@Async` services tested with `CountDownLatch`, not `Thread.sleep`
-- **Dependency scanning** — Snyk wired into Maven; high-severity findings block the build
+- **Layered by cost** — 128 tests across Mockito units, `@DataJpaTest` and `@WebMvcTest` slices, `@SpringBootTest` smoke, and WireMock against a real HTTP wire. Cheapest test that can still fail for the right reason
+- **Deterministic async** — `@Async` services tested by substituting a `SyncTaskExecutor`, so the proxy and interceptor stay real while execution becomes predictable. No sleeps, no polling
+- **Operated, not just built** — deployed on Railway with Postgres, actuator health, profile-based config, and a Docker image CI rebuilds on every push
+- **Debugged at the source** — I read framework code and attach a debugger to a running JVM when the logs are not enough
+- **Dependency scanning** — Snyk bound to the Maven `verify` phase in CI; a high-severity finding fails the build
 
 ---
 
@@ -56,4 +59,4 @@ I write tests that catch real failures, not tests that pass by definition. That 
 
 `ze2@hotmail.com` · [GitHub](https://github.com/A-Dagaate) · [Engineering notes](https://a-dagaate.github.io/)
 
-Open to SDET, QE lead, and backend engineering roles.
+Open to full-stack and backend Java / Spring Boot roles.
