@@ -46,14 +46,17 @@ I ship features with the evidence that they work, and I go looking for the ways 
 - **Dependency scanning** — Snyk bound to the Maven `verify` phase in CI; a high-severity finding fails the build
 
 ---
+## Certifications
+- CompTIA Security + CE
+- ISTQB CTFL (foundation)
+- ISTQB CTAL-TAE (advanced test automation engineer)
+- Scrum Alliance Certified Scrum Master
 
 ## Certifications in progress
 
-- ISTQB CTFL (foundation)
-- ISTQB CTAL-TAE (advanced test automation engineer)
 - ISTQB STE v1.0.1 (security test engineer)
 
----
+- AWS Cloud Security Architecture
 
 ## Let's talk
 
